@@ -41,5 +41,8 @@ module Blog
 
     # locale
     config.i18n.default_locale = :ja
+
+    # Active Job queue adapter
+    config.active_job.queue_adapter = :sidekiq
   end
 end
