@@ -13,7 +13,7 @@ class Admin::ProfilesController < Admin::BaseController
       redirect_to admin_profile_path, notice: "プロフィールを更新しました。"
     else
       set_minimum_password_length
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_content
     end
   end
 
