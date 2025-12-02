@@ -39,7 +39,7 @@
     <div class="item">
       <%= f.label :published_at, '公開日時' %>
     </div>
-    <%= f.datetime_field :published_at %>
+    <%= f.datetime_field :published_at, data: { controller: "flatpickr", flatpickr_enable_time_value: true } %>
     <div style="color: red">
       <%= post.errors.full_messages_for(:published_at).join(', ') if post.errors[:published_at].present? %>
     </div>
