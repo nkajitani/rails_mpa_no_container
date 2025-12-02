@@ -22,7 +22,7 @@ RSpec.describe "Users::Registrations", type: :request do
       expect(user.email).to eq("test@example.com")
       expect(user.confirmed?).to be_falsey
       expect(response).to redirect_to(root_path)
-      expect(ActionMailer::Base.deliveries.size).to eq(1)
+      expect(ActiveJob::Base.queue_adapter.enqueued_jobs.size).to eq(1)
     end
 
     # Skip invalid case as the registrations logic remains standard Devise

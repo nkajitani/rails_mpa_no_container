@@ -1,0 +1,8 @@
+<h2>新しいコメントが投稿されました</h2>
+
+<p><strong>記事:</strong> <%= @post.title %></p>
+<p><strong>投稿者:</strong> <%= @comment.name %></p>
+<p><strong>コメント:</strong></p>
+<p><%= @comment.body %></p>
+
+<p><%= link_to '記事を見る', post_url(@post) %></p>
