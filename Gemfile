@@ -52,6 +52,8 @@ gem "config", "~> 5.6.1"
 
 gem "redis-session-store", "~> 0.11.6"
 
+gem "sidekiq", "~> 8.0.10"
+
 group :development do
   gem "letter_opener_web", "~> 3.0.0"
 
