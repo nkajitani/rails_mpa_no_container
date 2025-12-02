@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/frontend/*"]
+    },
+
+    "types": ["vite/client"]
+  },
+  "include": [
+    "app/frontend/**/*"
+  ]
+}
