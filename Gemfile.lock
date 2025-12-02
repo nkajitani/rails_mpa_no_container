@@ -276,6 +276,13 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.26.1)
+      connection_pool
+    redis-session-store (0.11.6)
+      actionpack (>= 5.2.4.1, < 9)
+      redis (>= 3, < 6)
     regexp_parser (2.11.3)
     reline (0.6.2)
       io-console (~> 0.5)
@@ -382,7 +389,7 @@ DEPENDENCIES
   brakeman
   carrierwave (~> 3.1.2)
   commonmarker (~> 2.5.0)
-  config
+  config (~> 5.6.1)
   debug
   devise (~> 4.9.4)
   devise-i18n (~> 1.15.0)
@@ -394,6 +401,7 @@ DEPENDENCIES
   rails (~> 8.1.1)
   rails-controller-testing (~> 1.0.5)
   rails-i18n (~> 8.0.2)
+  redis-session-store
   rspec-rails (~> 8.0.2)
   rubocop-rails-omakase
   shoulda-matchers (~> 6.5.0)

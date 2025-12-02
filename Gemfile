@@ -50,6 +50,8 @@ gem "vite_rails", "~> 3.0.19"
 
 gem "config", "~> 5.6.1"
 
+gem "redis-session-store", "~> 0.11.6"
+
 group :development do
   gem "letter_opener_web", "~> 3.0.0"
 
