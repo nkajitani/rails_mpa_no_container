@@ -7,9 +7,8 @@ RSpec.describe User, type: :model do
 
   it 'update_without_current_password' do
     user = create(:user)
-    params = { name: 'New Name', email: 'new_email@example.com' }
+    params = { name: 'New Name' }
     user.update_without_current_password(params)
     expect(user.name).to eq(params[:name])
-    expect(user.email).to eq(params[:email])
   end
 end

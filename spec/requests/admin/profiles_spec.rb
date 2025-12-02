@@ -32,7 +32,8 @@ RSpec.describe "Admin::Profile", type: :request do
       expect(flash[:notice]).to eq('プロフィールを更新しました。')
       user.reload
       expect(user.name).to eq('New Name')
-      expect(user.email).to eq('new_email@example.com')
+      expect(user.unconfirmed_email).to eq('new_email@example.com')
+      expect(user.confirmed?).to be_truthy
     end
     it 'returns 422 unprocessable' do
       patch admin_profile_path, params: { user: { name: '', email: 'invalid_email' } }

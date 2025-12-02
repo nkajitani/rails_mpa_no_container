@@ -14,8 +14,15 @@ RSpec.describe "Users::Registrations", type: :request do
     end
 
     it 'renders a successful response' do
+      ActionMailer::Base.deliveries.clear
+
       post user_registration_path, params: valid_attributes
-      expect(response).to redirect_to(new_user_session_path)
+
+      user = User.last
+      expect(user.email).to eq("test@example.com")
+      expect(user.confirmed?).to be_falsey
+      expect(response).to redirect_to(root_path)
+      expect(ActionMailer::Base.deliveries.size).to eq(1)
     end
 
     # Skip invalid case as the registrations logic remains standard Devise
