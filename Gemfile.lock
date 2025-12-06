@@ -112,13 +112,6 @@ GEM
     brakeman (7.1.0)
       racc
     builder (3.3.0)
-    carrierwave (3.1.2)
-      activemodel (>= 6.0.0)
-      activesupport (>= 6.0.0)
-      addressable (~> 2.6)
-      image_processing (~> 1.1)
-      marcel (~> 1.0.0)
-      ssrf_filter (~> 1.0)
     childprocess (5.1.0)
       logger (~> 1.5)
     commonmarker (2.5.0-aarch64-linux)
@@ -369,7 +362,6 @@ GEM
       logger (>= 1.6.2)
       rack (>= 3.1.0)
       redis-client (>= 0.23.2)
-    ssrf_filter (1.3.0)
     stringio (3.1.7)
     thor (1.4.0)
     timeout (0.4.4)
@@ -414,14 +406,13 @@ DEPENDENCIES
   binding_of_caller (~> 1.0.1)
   bootsnap
   brakeman
-  carrierwave (~> 3.1.2)
   commonmarker (~> 2.5.0)
   config (~> 5.6.1)
   debug
   devise (~> 4.9.4)
   devise-i18n (~> 1.15.0)
   factory_bot_rails (~> 6.5.1)
-  image_processing
+  image_processing (~> 1.14.0)
   kaminari (~> 1.2.2)
   letter_opener_web (~> 3.0.0)
   mini_magick (~> 5.3.1)

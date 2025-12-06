@@ -32,8 +32,6 @@ group :development do
   gem "web-console"
 end
 
-gem "carrierwave", "~> 3.1.2"
-
 gem "devise", "~> 4.9.4"
 
 gem "devise-i18n", "~> 1.15.0"
