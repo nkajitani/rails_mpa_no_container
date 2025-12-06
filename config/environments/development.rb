@@ -66,8 +66,13 @@ Rails.application.configure do
 
   # allow ip
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+
   # display inspect debug
   config.debug_exception_response_format = :default
+
   # letter_opener_web settings
   config.action_mailer.delivery_method = :letter_opener_web
+
+  # Active Storage service
+  config.active_storage.service = :storage
 end

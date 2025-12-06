@@ -1,0 +1,12 @@
+storage:
+  service: S3
+  access_key_id: <%= Settings.storage&.access_key_id %>
+  secret_access_key: <%= Settings.storage&.secret_access_key %>
+  region: <%= Settings.storage&.region %>
+  bucket: <%= Settings.storage&.bucket %>
+  endpoint: <%= Settings.storage&.endpoint %>
+  force_path_style: <%= Settings.storage&.force_path_style %>
+
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>

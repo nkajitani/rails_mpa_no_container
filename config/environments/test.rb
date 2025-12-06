@@ -50,4 +50,7 @@ Rails.application.configure do
 
   # Active Job queue adapter
   config.active_job.queue_adapter = :test
+
+  # Active Storage service
+  config.active_storage.service = :test
 end

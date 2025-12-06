@@ -1,0 +1,7 @@
+storage:
+  endpoint: "http://localhost:9000"
+  access_key_id: "admin"
+  secret_access_key: "password"
+  region: "us-east-1"
+  bucket: "blog-development"
+  force_path_style: true
