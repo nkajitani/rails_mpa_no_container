@@ -38,8 +38,6 @@ gem "devise-i18n", "~> 1.15.0"
 
 gem "kaminari", "~> 1.2.2"
 
-gem "mini_magick", "~> 5.3.1"
-
 gem "rails-i18n", "~> 8.0.2"
 
 gem "commonmarker", "~> 2.5.0"
