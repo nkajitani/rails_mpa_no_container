@@ -20,6 +20,7 @@ class Admin::PostsController < Admin::BaseController
   # POST /admin/posts
   def create
     @post = Post.new(post_params)
+    @post.image.attach(post_params[:image])
 
     if @post.save
       redirect_to [ :admin, @post ], notice: "ブログが作成されました。"
@@ -30,6 +31,8 @@ class Admin::PostsController < Admin::BaseController
 
   # PATCH/PUT /admin/posts/1
   def update
+    @post.image.attach(post_params[:image]) if post_params[:image].present?
+
     if @post.update(post_params)
       redirect_to [ :admin, @post ], notice: "ブログが更新されました。"
     else
@@ -49,6 +52,6 @@ class Admin::PostsController < Admin::BaseController
     end
 
     def post_params
-      params.fetch(:post).permit(:title, :body, :image, :image_cache, :published_at)
+      params.fetch(:post).permit(:title, :body, :image, :published_at)
     end
 end

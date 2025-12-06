@@ -2,7 +2,9 @@
 class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
-  mount_uploader :image, ::ImageUploader
+  has_one_attached :image do |attachable|
+    attachable.variant :list, resize_to_fit: [ 120, 120 ]
+  end
 
   validates :title, presence: true
   validates :body, presence: true

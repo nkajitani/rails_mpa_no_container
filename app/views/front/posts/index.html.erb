@@ -16,7 +16,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.title, post_path(post) %></td>
-        <td><%= image_tag post.image.list.url %></td>
+        <td><%= post.image.attached? ? image_tag(post.image.variant(resize_to_limit: [100, 100])) : "" %></td>
         <td><%= l(post.published_at, format: :long) %></td>
       </tr>
     <% end %>
