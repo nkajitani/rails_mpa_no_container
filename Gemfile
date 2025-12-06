@@ -54,6 +54,10 @@ gem "redis-session-store", "~> 0.11.6"
 
 gem "sidekiq", "~> 8.0.10"
 
+gem "aws-sdk-s3", "~> 1.206.0"
+
+gem "image_processing", "~> 1.14.0"
+
 group :development do
   gem "letter_opener_web", "~> 3.0.0"
 
