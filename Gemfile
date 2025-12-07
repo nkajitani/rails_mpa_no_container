@@ -54,6 +54,8 @@ gem "aws-sdk-s3", "~> 1.206.0"
 
 gem "image_processing", "~> 1.14.0"
 
+gem "mini_magick", "~> 5.3.1"
+
 group :development do
   gem "letter_opener_web", "~> 3.0.0"
 
