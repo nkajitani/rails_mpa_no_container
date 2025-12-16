@@ -2,25 +2,27 @@
 
 <h1>ブログ一覧</h1>
 
-<%= paginate @posts %>
+<%= turbo_frame_tag "posts", data: { turbo_action: :advance } do %>
+  <%= paginate @posts %>
 
-<table>
-  <thead>
-    <tr>
-      <th>タイトル</th>
-      <th>画像</th>
-      <th>公開日</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to post.title, post_path(post) %></td>
-        <td><%= post.image.attached? ? image_tag(post.image.variant(resize_to_limit: [100, 100])) : "" %></td>
-        <td><%= l(post.published_at, format: :long) %></td>
+        <th>タイトル</th>
+        <th>画像</th>
+        <th>公開日</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= link_to post.title, post_path(post), data: { turbo_frame: "_top" } %></td>
+          <td><%= post.image.attached? ? image_tag(post.image.variant(resize_to_limit: [100, 100])) : "" %></td>
+          <td><%= l(post.published_at, format: :long) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= paginate @posts %>
+  <%= paginate @posts %>
+<% end %>
