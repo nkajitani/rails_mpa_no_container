@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.1"
+# The speed of a single-page web application without having to write any JavaScript
+gem "turbo-rails"
 # Use trilogy as the database for Active Record
 gem "trilogy", "~> 2.7"
 # Use the Puma web server [https://github.com/puma/puma]

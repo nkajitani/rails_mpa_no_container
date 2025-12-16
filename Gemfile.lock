@@ -367,6 +367,9 @@ GEM
     timeout (0.4.4)
     trilogy (2.9.0)
     tsort (0.2.0)
+    turbo-rails (2.0.20)
+      actionpack (>= 7.1.0)
+      railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
@@ -426,6 +429,7 @@ DEPENDENCIES
   shoulda-matchers (~> 6.5.0)
   sidekiq (~> 8.0.10)
   trilogy (~> 2.7)
+  turbo-rails
   tzinfo-data
   vite_rails (~> 3.0.19)
   web-console
