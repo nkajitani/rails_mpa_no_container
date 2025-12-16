@@ -53,4 +53,5 @@ Rails.application.configure do
 
   # Active Storage service
   config.active_storage.service = :test
+  config.active_storage.variant_processor = :mini_magick
 end
