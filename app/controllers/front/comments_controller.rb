@@ -5,6 +5,7 @@ class Front::CommentsController < Front::BaseController
 
     if @comment.save
       CommentMailer.comment_notification(@comment).deliver_later
+      Front::CommentCounterJob.perform_later(@post.id)
       redirect_to post_path(@post), notice: "コメントを投稿しました。"
     else
       @comments = @post.comments.order(created_at: :desc).page(params[:page])
