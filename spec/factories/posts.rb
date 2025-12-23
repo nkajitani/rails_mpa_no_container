@@ -9,5 +9,6 @@ FactoryBot.define do
       )
     end
     published_at { Time.current }
+    comments_count { 0 }
   end
 end
