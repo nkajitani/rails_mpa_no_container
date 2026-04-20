@@ -4,3 +4,4 @@ storage:
   region: <%= ENV["STORAGE_REGION"] %>
   bucket: <%= ENV["STORAGE_BUCKET"] %>
   force_path_style: <%= ENV.fetch("STORAGE_FORCE_PATH_STYLE", "false") %>
+notification_email: "support@nkajitani.com"
